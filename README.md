@@ -6,9 +6,9 @@
 
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
 
-## Express.js with prisma
+## Express.js with typeorm
 
-[Express](https://github.com/expressjs/express) framework TypeScript starter repository. Prisma ORM and RESTful API.
+[Express](https://github.com/expressjs/express) framework TypeScript starter repository. typeorm and RESTful API.
 
 ### Node Version - 20.11.1
 
@@ -29,13 +29,6 @@ $ cp .env.example .env
 ```
 After that you have to fill env requirements.
 
-## Migrate
-
-prisma
-
-```bash
-$ npx prisma migrate dev
-```
 
 ## Run development
 
@@ -57,6 +50,14 @@ $ DATABASE_URL="mysql://youruser:yourpassword@host.docker.internal:3306/yourdata
 
 ```bash
 $ sh docker.sh
+```
+
+## Seed fake data
+
+typeorm
+
+```bash
+$ npm run seed
 ```
 ## Let me know if you have any issues
 Please write [here](https://github.com/Global-kits/express-prisma-rest/issues).
