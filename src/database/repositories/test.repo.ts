@@ -1,8 +1,12 @@
-import { createTest, updateTest, TestRepoInterface, RepositoryInterface } from "../../interfaces/repository";
+import {
+  createTest,
+  updateTest,
+  TestRepoInterface,
+  RepositoryInterface,
+} from "../../interfaces/repository";
 import { Test } from "../entities/test.entity";
 
 export class TestRepository implements TestRepoInterface, RepositoryInterface {
-
   private model: Test;
   constructor(model: Test) {
     this.model = model;
@@ -10,7 +14,7 @@ export class TestRepository implements TestRepoInterface, RepositoryInterface {
 
   get(): Object {
     try {
-      return {}
+      return {};
     } catch (error) {
       let err = error as Error;
       throw new Error(err.message);
@@ -18,7 +22,7 @@ export class TestRepository implements TestRepoInterface, RepositoryInterface {
   }
   getAll(): Object[] {
     try {
-      return [{}]
+      return [{}];
     } catch (error) {
       let err = error as Error;
       throw new Error(err.message);
