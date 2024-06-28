@@ -22,4 +22,6 @@ import TestFactory from './database/factories/test.factory';
     await dataSource.initialize();
 
     await runSeeders(dataSource);
+    console.log("Seed process finished!\n","To Exit: press ctl+c or cmd+c")
+
 })();

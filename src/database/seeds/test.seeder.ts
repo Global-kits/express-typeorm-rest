@@ -25,6 +25,5 @@ export default class TestSeeder implements Seeder {
         // save 5 factory generated entities, to the database
         await testFactory.saveMany(5);
 
-        console.log("To Exit: press ctl+c or cmd+c")
     }
 }
