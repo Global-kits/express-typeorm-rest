@@ -1,27 +1,26 @@
-import { DataSource, DataSourceOptions } from 'typeorm';
-import { runSeeders, SeederOptions } from 'typeorm-extension';
-import { Test } from './database/entities/test.entity';
-import TestSeeder from './database/seeds/test.seeder';
-import TestFactory from './database/factories/test.factory';
+import { DataSource, DataSourceOptions } from "typeorm";
+import { runSeeders, SeederOptions } from "typeorm-extension";
+import { Test } from "./database/entities/test.entity";
+import TestSeeder from "./database/seeds/test.seeder";
+import TestFactory from "./database/factories/test.factory";
 
 (async () => {
-    const options: DataSourceOptions & SeederOptions = {
-        type: "mysql",
-        host: "localhost",
-        port: 3306,
-        username: "root",
-        password: "",
-        database: "test",
-        entities: [Test],
+  const options: DataSourceOptions & SeederOptions = {
+    type: "mysql",
+    host: "localhost",
+    port: 3306,
+    username: "root",
+    password: "",
+    database: "test",
+    entities: [Test],
 
-        seeds: [TestSeeder],
-        factories: [TestFactory]
-    };
+    seeds: [TestSeeder],
+    factories: [TestFactory],
+  };
 
-    const dataSource = new DataSource(options);
-    await dataSource.initialize();
+  const dataSource = new DataSource(options);
+  await dataSource.initialize();
 
-    await runSeeders(dataSource);
-    console.log("Seed process finished!\n","To Exit: press ctl+c or cmd+c")
-
+  await runSeeders(dataSource);
+  console.log("Seed process finished!\n", "To Exit: press ctl+c or cmd+c");
 })();
