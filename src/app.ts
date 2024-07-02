@@ -5,7 +5,7 @@ import helmet from "helmet";
 const app = express();
 app.use(helmet());
 
-routes(app);
+app.use(routes);
 app.get("/", (req, res) => {
   return res.json("hi");
 });

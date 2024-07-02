@@ -2,10 +2,8 @@ import { TestRepository } from "../database/repositories/test.repo";
 import { TestServiceInterface } from "../interfaces/service/test-service.interface";
 
 export class TestService implements TestServiceInterface {
-  private repo: TestRepository;
-  constructor(repo: TestRepository) {
-    this.repo = repo;
-  }
+
+  constructor(private repo: TestRepository) {}
 
   async get() {
     try {

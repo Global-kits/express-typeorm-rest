@@ -1,8 +1,8 @@
-import { Express } from "express";
+import { Express, Router } from "express";
 import testRoute from "./test.route";
 
-const PREFIX = "/api";
-export default (router: Express) => {
-  testRoute(router, PREFIX);
-  return;
-};
+const router = Router()
+
+router.use('/api', testRoute)
+
+export default router;

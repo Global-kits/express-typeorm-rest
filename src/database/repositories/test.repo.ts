@@ -7,10 +7,8 @@ import {
 import { Test } from "../entities/test.entity";
 
 export class TestRepository implements TestRepoInterface, RepositoryInterface {
-  private model: Test;
-  constructor(model: Test) {
-    this.model = model;
-  }
+
+  constructor( private model: Test) {}
 
   get(): Object {
     try {
