@@ -4,10 +4,8 @@ import AutoBindMethod from "../utils/auto-bind-method";
 import { TestControllerInterface } from "../interfaces/controller/test-controller.interface";
 
 export class TestController implements TestControllerInterface {
-  private service: TestService;
-  constructor(service: TestService) {
-    this.service = service;
-  }
+  
+  constructor(private service: TestService) {}
 
   @AutoBindMethod
   async get(req, res) {

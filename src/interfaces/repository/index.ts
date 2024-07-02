@@ -1,8 +1,6 @@
 export interface RepositoryInterface {
-    get(): Object;
-    getAll(): Object[];
+  get(): Object;
+  getAll(): Object[];
 }
 
-export * from './test-repo.interface';
-
-
+export * from "./test-repo.interface";
